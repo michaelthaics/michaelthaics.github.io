@@ -8,8 +8,6 @@
 	</head>
 
     <body id = "bg">
-
-        <!-- THIS DIV TAG IS RESPONSIBLE FOR LAYOUT, DON'T REMOVE IT UNLESS YOU WANT YOUR LAYOUT TO ME MESSED UP.-->
         <div class="nav-bar">        
                 <img id = "logo" src = "images/logo.png">
                 <a href="index.html">Home</a>       
@@ -41,8 +39,10 @@
         <div class = "maintext" id = "cleartext">
             <h1>Welcome to my web page!</h1><hr>
             <p>
-                This webpage is designed by Michael Thai as a fun learning experience with html/JS/CSS. There is really 
-                not much going on currently here. Let's fix that eventually!
+                This webpage is designed by Michael Thai as a fun learning experience with html/JS/jquery/CSS. The purpose of this webpage is 
+                to build a blog (kind of) from scratch. Each tab contains some information about the various games that I have previously 
+                played. I have included my thoughts on the games, my personal achievements, as well as my progression in each game. I will
+                probably include a separate tab for my other interests at some later date. 
             </p>
             <h2>What works</h2><hr>
             <ol>
@@ -50,9 +50,6 @@
                 <li>Home Page tab</li>
             </ol>
                 
-            <p>
-                 Note to self: probably a better idea to build the container layers like the home page instead of the shadowverse page like a scrub. 
-            </p>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
@@ -61,6 +58,14 @@
         </div>
         
         <script>
-        </script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "10%";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }   
+                    
+        </script>            
     </body>
 </html>
