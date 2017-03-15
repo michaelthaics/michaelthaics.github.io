@@ -5,7 +5,7 @@
     <head>
         <title>Empty Blog</title>
 		<link rel="stylesheet" href="../mystyle.css" type="text/css" />
-	</head>
+	    <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 
     <body id = "bg">
 
@@ -43,20 +43,15 @@
             <p>Swordcraft Decks</p><hr>
             <img src = "../images/albert.png" id = "card">
             <img src = "../images/tsubaki.png" id = "card">
-            <img src = "../images/aurelia.png" id = "card">
             <p>Havencraft Decks</p><hr>
             <img src = "../images/seraph.png" id = "card">
-            <img src = "../images/moon.png" id = "card">
-            <img src = "../images/madness.png" id = "card">  
+            <img src = "../images/moon.png" id = "card"> 
             <p>Forestcraft Decks</p><hr>
             <img src = "../images/wolf.png" id = "card">
-            <img src = "../images/tia.png" id = "card">
             <img src = "../images/elf.png" id = "card">             
             <p>Runecraft Decks</p><hr>
             <img src = "../images/daria.png" id = "card">
-            <img src = "../images/merlin.png" id = "card">
-            <img src = "../images/erasmus.png" id = "card">              
-            
+            <img src = "../images/merlin.png" id = "card">            
         </div>
         
         
@@ -185,7 +180,24 @@
 
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
-            }            
+            }   
+                    
+        </script>
+        <script type="text/javascript">
+            $(window).resize(function() {
+
+              if ($(this).width() < 1024) {
+
+                $('.sidebar').hide();
+
+              } else {
+
+                $('.sidebar').show();
+
+                }
+
+            });         
         </script>
     </body>
+    </head>
 </html>
