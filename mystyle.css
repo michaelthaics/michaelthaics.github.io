@@ -142,7 +142,7 @@ img.center {
 
 /* The side navigation menu */
 .sidenav {
-    margin-top:65px;
+    margin-top:58px;
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
@@ -151,7 +151,7 @@ img.center {
     left: 90%;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 58px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -184,7 +184,7 @@ img.center {
     color: white;
     text-align: right;
     margin:auto;
-    padding: 9px 16px;
+    padding: 7px 16px;
     text-decoration: none;
     font-size: 30px;
     font-family: "Times New Roman", Times, serif; 
