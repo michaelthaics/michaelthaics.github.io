@@ -18,7 +18,6 @@ html, body {
     background:url(images/daria.jpg);
     width: 100%;
     height: 100%;
-    margin-left: 0;
     color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -31,7 +30,6 @@ html, body {
     background:url(images/mccree.jpg);
     width: 100%;
     height: 100%;
-    margin-left: 0;
     color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -43,7 +41,6 @@ html, body {
     background:url(images/cblossoms.png);
     width: 100%;
     height: 100%;
-    margin-left: 0;
     color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -74,7 +71,7 @@ html, body {
     border-left:1px solid white;
     border-bottom:1px solid white;
     margin:auto;
-    padding: 12px 16px;
+    padding: 10px 16px;
     text-decoration: none;
     font-size: 30px;
     font-family: "Times New Roman", Times, serif;
@@ -99,7 +96,7 @@ html, body {
 
 #logo {
     float:left;
-    height: 60px;
+    height: 56px;
     vertical-align:middle;
 }
 
@@ -216,7 +213,7 @@ img.center {
     border: 1px solid white;
     outline: none;
     color: white;
-    padding: 11px 13px;
+    padding: 10px 13px;
     background-color: inherit;
     font-family: "Times New Roman", Times, serif;
 }
