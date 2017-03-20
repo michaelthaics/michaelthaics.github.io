@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Empty Blog</title>
+		<link rel="stylesheet" href="../mystyle.css" type="text/css" />
+	</head>
+
+    <body id = "bgboost">
+        <div class="nav-bar">        
+                <img id = "logo" src = "../images/logo.png">
+                <a href="../index.html">Home</a>       
+                <a href="ow.html">Overwatch</a>
+                <a href="sv.html">Shadowverse</a>
+                <div class = "dropdown">
+                    <button class="dropbtn">SV Decks</button>
+                    <div class="dropdown-content">
+                        <a href="#">Sword</a>
+                        <a href="#">Forest</a>
+                        <a href="#">Haven</a>
+                        <a href="#">Rune</a>
+                        <a href="#">Dragon</a>
+                        <a href="#">Blood</a>
+                     </div>
+                </div>    
+                <a href="boosting.html">OW Boosting</a>
+                <a href="#" id = "sidenavbtn" onclick = "openNav()">&#9776; About</a>
+        </div>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        
+        <div class = "maintext" id = "cleartext">
+            <h2>Overwatch Boosting</h2>
+            <hr>
+            <p>
+                Are you tired of being stuck in Elo Hell? Are the other boosters too expensive? Welcome to Empty's personal 
+                Overwatch boosting service! I am a grandmaster player ~4100 SR as of season 4, and can comfortably boost up to
+                ~3500 (Masters) in a short period of time. I've gotten 3 other accounts to Masters this season (my 2nd account,
+                as well as 2 of my other friend's accounts). During the boosting process, I will ignore everyone on your friendslist
+                and let you know who is messaging you. In addition, I do not mind streaming the games on twitch.tv in case you are
+                worried about me using cheats or other third party software to assist me in the boost. You can use the sliders below
+                to select the range from where you would like the boost. 
+                <br><br>
+                For contact information,  you could use the "About" sidebar on the top right corner or add me on Skype at
+                goldengenjimccree@hotmail.com or "Stars Elo Boost". 
+            </p>
+            <hr><br>
+            <img src = "../images/tiers.png" width = "100%">
+            <form>
+                <p>Your Current Rating</p>
+                <input type="range" id="start" min="1500" max="3500" onchange="currentRating()" value="2500" step ="10"/>  
+                <output type="number" id="rangeValue" size="3" reset = "2500" value = "2500">2500</output>
+                <br><br>
+                <p>Your Desired Rating</p>
+                <input type="range" id="end" min="1500" max="3500" onchange="desiredRating()" value="2500" step ="10"/>  
+                <output type="number" id="rangeValue2" size="3" reset = "2500" value = "2500">2500</output>      
+                <br><br><br>        
+            </form>
+            <output type="text" id="cost" size="3">The cost of your boost from 2500 SR to 2500 SR is $0.00. See below for the price guide.</output>
+            <hr><br>
+            <h2>Pricing</h2><hr>
+            <p>The pricing is justified into 3 tiers. </p>
+            <ul>
+                <li>1500-2600 : $2 per 100 SR</li>
+                <li>2600-3000 : $4 per 100 SR</li>
+                <li>3000-3500 : $8 per 100 SR</li>
+            </ul>
+            <p>For placement matches or larger orders, feel free to contact me on skype. My skype information is listed above, as well as in the "About" sidebar.</p>
+            <h1>NOTE: No payment portal has been set up yet (or maybe never will be?). THANKS GUISE.</h1>
+        </div>
+        
+        <div class = "footer">
+        </div>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "10%";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }   
+            
+            function currentRating(){
+                var rating = document.getElementById('start').value;
+                document.getElementById('rangeValue').value = rating; 
+                calculateCost();
+            }
+
+            function desiredRating(){
+                var rating = document.getElementById('end').value;
+                document.getElementById('rangeValue2').value = rating;
+                calculateCost();
+            }
+            
+            function calculateCost(){
+                var start = document.getElementById('start').value;
+                var end = document.getElementById('end').value;
+                var price;
+                
+                if(start < end){
+                    if (end < 2600){
+                        price = (end - start)/100*2;
+                    }else if (end < 3000){
+                        if (start < 2600){
+                            price = (2600 - start)/100*2;
+                            price = price + (end-2600)/100*4;
+                        }
+                    }else{
+                        if (start < 2600){
+                            price = (2600 - start)/100*2;
+                            price = price + 16 + ((end-3000)/100*8);
+                        }
+                    }
+                }else{
+                    price = 0;
+                }
+                console.log(start+ " |"+ end + " |"+ price);
+                document.getElementById('cost').value = "The cost of your boost from " + start + " SR to " + end + " SR is $" + price.toFixed(2) + ". See below for the price guide.";
+            }
+
+        </script>            
+    </body>
+</html>

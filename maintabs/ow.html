@@ -23,7 +23,8 @@
                         <a href="#">Dragon</a>
                         <a href="#">Blood</a>
                      </div>
-                </div>    
+                </div>
+                <a href="boosting.html">OW Boosting</a>            
                 <a href="#" id = "sidenavbtn" onclick = "openNav()">&#9776; About</a>
         </div>
         
@@ -138,7 +139,14 @@
                     <div class="text">Golden Widowmaker</div>
                 </div>   
             </div>
-            <p>note: click the image to stop the slideshow</p>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="changeSlides(0)"></span> 
+                <span class="dot" onclick="changeSlides(1)"></span> 
+                <span class="dot" onclick="changeSlides(2)"></span> 
+                <span class="dot" onclick="changeSlides(3)"></span> 
+                <span class="dot" onclick="changeSlides(4)"></span> 
+            </div>      
         </div>
         
         <div class = "footer">
@@ -177,7 +185,17 @@
                 }else{
                     interval = setInterval("showSlides()", 2000);
                 }
-            }               
+            }   
+            
+            function changeSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++){
+                    slides[i].style.display = "none";
+                }
+                stopSlides();
+                slides[n].style.display = "block";
+            }
         </script>            
     </body>
 </html>
