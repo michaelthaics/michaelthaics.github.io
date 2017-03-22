@@ -8,24 +8,21 @@
 	</head>
 
     <body id = "bgboost">
-        <div class="nav-bar">        
-                <img id = "logo" src = "../images/logo.png">
-                <a href="../index.html">Home</a>       
-                <a href="ow.html">Overwatch</a>
-                <a href="sv.html">Shadowverse</a>
-                <div class = "dropdown">
-                    <button class="dropbtn">SV Decks</button>
-                    <div class="dropdown-content">
-                        <a href="#">Sword</a>
-                        <a href="#">Forest</a>
-                        <a href="#">Haven</a>
-                        <a href="#">Rune</a>
-                        <a href="#">Dragon</a>
-                        <a href="#">Blood</a>
-                     </div>
-                </div>    
-                <a href="boosting.html">OW Boosting</a>
-                <a href="#" id = "sidenavbtn" onclick = "openNav()">&#9776; About</a>
+        <div class="header">        
+            <a href="../index.html"><img id = "logo" src = "../images/megumi_render_clipped.png"></a>
+            <p>Empty's Blog - by "MT" | Never toxic. Never Flame.</p>
+            <a href="#" id = "sidenavbtn" onclick = "openNav()">&#9776; </a>
+        </div>
+        
+        <div class="nav-bar">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../index.html">Home</a>       
+            <a href="ow.html">Overwatch</a>
+            <a href="sv.html">Shadowverse</a> 
+            <a href="#">SV Decks</a>
+            <a href="boosting.html">OW Boosting</a> 
+            <a href="#">Osu!</a>
         </div>
         
         <div id="mySidenav" class="sidenav">
@@ -54,12 +51,12 @@
             <img src = "../images/tiers.png" width = "100%">
             <form>
                 <p>Your Current Rating</p>
-                <input type="range" id="start" min="1500" max="3500" onchange="currentRating()" value="2500" step ="10"/>  
-                <output type="number" id="rangeValue" size="3" reset = "2500" value = "2500">2500</output>
+                <input type="range" id="start" min="1500" max="3500" onchange="currentRating()" oninput="currentRating()" value="2500" step ="10"/>  
+                <output type="number" id="rangeValue" size="3" reset = "2500" value = "range.value">2500</output>      
                 <br><br>
                 <p>Your Desired Rating</p>
-                <input type="range" id="end" min="1500" max="3500" onchange="desiredRating()" value="2500" step ="10"/>  
-                <output type="number" id="rangeValue2" size="3" reset = "2500" value = "2500">2500</output>      
+                <input type="range" id="end" min="1500" max="3500" onchange="desiredRating()" oninput="desiredRating()" value="2500" step ="10"/>  
+                <output type="number" id="rangeValue2" size="3" reset = "2500" value = "range.value">2500</output>      
                 <br><br><br>        
             </form>
             <output type="text" id="cost" size="3">The cost of your boost from 2500 SR to 2500 SR is $0.00. See below for the price guide.</output>
@@ -121,7 +118,6 @@
                 }else{
                     price = 0;
                 }
-                console.log(start+ " |"+ end + " |"+ price);
                 document.getElementById('cost').value = "The cost of your boost from " + start + " SR to " + end + " SR is $" + price.toFixed(2) + ". See below for the price guide.";
             }
 

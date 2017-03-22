@@ -1,8 +1,6 @@
 /* Mystyle.css */
 
 /* 
- * It's not recommend you edit the code between the Start Position CSS and End Position CSS comments unless you really know what
- * you're doing.  If you do, you could break the layout, and you could experience a lot of wacky behaviour.
  * 
  **/
 
@@ -38,7 +36,7 @@ html, body {
 }    
     
 #bghome {
-    background:url(images/cblossoms.png);
+    background:url(images/anime.jpg);
     width: 100%;
     height: 100%;
     color: white;
@@ -59,36 +57,51 @@ html, body {
     opacity: 0.7      
 }
 
-.nav-bar { 
-    min-width:1218px;
-    border: 2px solid white;
-    height:58px;
-    position:fixed;
-    float: left;
-	width: 100%;
-	margin: auto;
-	text-align: left;
-    background-color: grey;
+.header { 
+    min-width:950px;
+    height:150px;
+    float: center;
+	width: 60%;
+	margin-left: 20%;
+    background:url(images/header-blue.jpg);
     z-index: 10;
-    max-height:70px;
+    font-size: 25px;
 }
 
-.nav-bar a {
+.header p {
     float: left;
     color: white;
-    text-align: right;
-    border-right:1px solid white;
-    border-left:1px solid white;
-    border-bottom:1px solid white;
+    text-align: center;
+    padding-top:50px;
+    padding-left:5%;
     margin:auto;
-    padding: 10px 16px;
+    font-size:35px;
     text-decoration: none;
-    font-size: 30px;
     font-family: "Times New Roman", Times, serif;
 }
 
-.nav-bar a:hover{
+.header a:hover{
     background-color: black;
+}
+
+.nav-bar {
+    min-width:950px;
+    height:25px;
+    float:center;
+    width:60%;
+    margin-left:20%;
+    background-color:aliceblue;
+}
+
+.nav-bar a {
+    padding-left: 30px;
+    float: middle;
+    color: black;
+    text-align: left;
+    margin:0;
+    font-size:20px;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .sidebar {
@@ -106,7 +119,7 @@ html, body {
 
 #logo {
     float:left;
-    height: 56px;
+    height: 150px;
     vertical-align:middle;
 }
 
@@ -128,17 +141,14 @@ img.center {
 }
 
 .maintext { 
-	
-	/*Start Position CSS*/
-    margin-top:77px;
+    min-width:950px;
     color:white;
     text-align:left;
 	width: 60%;	
 	float: left;
     margin-left:20%;
 	padding: 1em;	
-    background-color: black;
-	/*End Position CSS*/	
+    background-color: black;	
 }
 
 .maintext a{
@@ -152,13 +162,11 @@ img.center {
 
 /* The side navigation menu */
 .sidenav {
-    margin-top:58px;
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
-    left: 90%;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 58px; /* Place content 60px from the top */
@@ -190,15 +198,16 @@ img.center {
 }
 
 #sidenavbtn{
+    height: 150px;
     float: right;
     color: white;
     text-align: right;
-    margin:auto;
-    padding: 7px 16px;
+    margin-top:0;
+    padding: 35px 16px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 45px;
     font-family: "Times New Roman", Times, serif; 
-    border-left: 1px solid white;
+    border-left:1px solid white;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -214,17 +223,15 @@ img.center {
 }
 
 .dropdown {
+    margin:0;
     float: left;
     overflow: visible;
 }
 
 .dropdown .dropbtn {
-    font-size: 30px;    
-    border: 1px solid white;
-    outline: none;
+    font-size: 10px;    
     color: white;
-    padding: 10px 13px;
-    background-color: inherit;
+    background-color: gray;
     font-family: "Times New Roman", Times, serif;
 }
 
